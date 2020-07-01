@@ -1,0 +1,279 @@
+@charset "UTF-8";
+/*定义滚动条高宽及背景
+ 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/*定义滚动条轨道
+  内阴影+圆角*/
+::-webkit-scrollbar-track {
+  background-color: rgba(46, 197, 216, 0.2);
+}
+
+/*定义滑块
+  内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #2ec5d8;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.justify-sb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.aic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.map {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/bg.jpg") center no-repeat;
+}
+
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 107px;
+  z-index: 2;
+  padding: 20px;
+  color: #fff;
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(12, 29, 65, 0.6)), to(rgba(12, 29, 65, 0)));
+  background: linear-gradient(to bottom, rgba(12, 29, 65, 0.6) 0%, rgba(12, 29, 65, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#800c1d41', endColorstr='#000c1d41',GradientType=0 );
+  /* IE6-9 */
+}
+
+.user__avatar {
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+}
+
+.user__name {
+  margin-left: 13px;
+  cursor: pointer;
+}
+
+.user__name::after {
+  content: '';
+  display: inline-block;
+  border: 5px solid transparent;
+  border-top-color: rgba(255, 255, 255, 0.4);
+  vertical-align: -3px;
+  margin-left: 5px;
+}
+
+.user__fullscreen {
+  width: 34px;
+  height: 34px;
+  margin-left: 35px;
+  background: rgba(255, 255, 255, 0.4) url("../images/fullscreen.png") center no-repeat;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.catalogue {
+  position: absolute;
+  left: 10px;
+  top: 110px;
+  width: 300px;
+  height: calc(100% - 170px);
+  padding: 10px;
+  z-index: 2;
+  color: #fff;
+  background: rgba(16, 39, 87, 0.9);
+  overflow-y: scroll;
+  border-radius: 10px;
+}
+
+.catalogue__title {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 0 18px;
+}
+
+.catalogue__title::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  background: url("../images/zhuantiicon.png");
+  vertical-align: -3px;
+}
+
+.menu__mine span {
+  display: inline-block;
+  width: 84px;
+  height: 45px;
+  padding: 5px 0;
+  background: rgba(58, 145, 186, 0.3);
+  border: 1px solid rgba(81, 237, 255, 0.3);
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  color: #50b8f0;
+}
+
+.menu__mine span:hover {
+  background: rgba(58, 145, 186, 0.5);
+  border: 1px solid rgba(81, 237, 255, 0.5);
+}
+
+.menu__list {
+  margin-top: 20px;
+}
+
+.menu__item {
+  margin-bottom: 20px;
+}
+
+.menu__item__title {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu__item__title input[type='checkbox'] {
+  margin-right: 10px;
+}
+
+.menu__item__title i {
+  content: '';
+  display: inline-block;
+  border: 5px solid transparent;
+  border-top-color: rgba(159, 245, 255, 0.8);
+  vertical-align: -3px;
+  margin-left: 5px;
+}
+
+.landscape {
+  padding: 0 15px;
+}
+
+.landscape label {
+  position: relative;
+  display: inline-block;
+  width: 110px;
+  height: 63px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.landscape label img {
+  width: 100%;
+}
+
+.landscape label input {
+  opacity: 0;
+  -webkit-transition: opacity ease-in-out 0.3s;
+  transition: opacity ease-in-out 0.3s;
+}
+
+.landscape label input:checked {
+  opacity: 1;
+}
+
+.landscape label:hover input {
+  opacity: 1;
+}
+
+.landscape label:nth-child(odd) {
+  margin-right: 10px;
+}
+
+.landscape__item-title {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding: 7px;
+}
+
+.map-tools {
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  bottom: 40px;
+}
+
+.monitor span {
+  display: inline-block;
+  width: 62px;
+  height: 62px;
+  background: #fff url("../images/camare.png") center no-repeat;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.monitor span.view720 {
+  background-image: url("../images/view720.png");
+}
+
+.monitor span + span {
+  margin-left: 10px;
+}
+
+.pop {
+  position: absolute;
+  z-index: 3;
+  width: 650px;
+  height: 530px;
+  right: 20px;
+  top: 50%;
+  padding: 20px;
+  margin-top: -265px;
+  background: rgba(16, 39, 87, 0.9);
+  color: #fff;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+.pop__title {
+  font-size: 18px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.pop__title i {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../images/guanbi.png") center no-repeat;
+}
+/*# sourceMappingURL=style.css.map */
