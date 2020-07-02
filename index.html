@@ -225,6 +225,82 @@
         },
       });
 
+      (function (window, document) {
+        var Modal = function (options) {
+          var defaults = {
+            title: "温馨提示",
+            content: "",
+            width: 440,
+            height: 260,
+            buttons: [
+              {
+                text: "确定",
+                hideModal: true,
+                onCallback: null,
+              },
+            ],
+          };
+          var opt = $.extend({}, defaults, options),
+            _this = this,
+            title = $('<div class="jscg-alert__title">' + opt.title + "</div>"),
+            content = $(
+              '<div class="jscg-alert__content">' + opt.content + "</div>"
+            ),
+            actions = $('<div class="jscg-alert__action"></div>'),
+            len = opt.buttons.length;
+
+          _this.ele = $(
+            '<div class="jscg-alert" style="display: non;"><div class="jscg-alert__mask"></div><div class="jscg-alert__box"></div></div>'
+          );
+          _this.closeEle = $(
+            '<button id="alertClose" class="close">✕</button>'
+          );
+          title.append(_this.closeEle);
+          _this.ele
+            .find(".jscg-alert__box")
+            .append(title)
+            .append(content)
+            .append(actions);
+          $("body").append(_this.ele);
+
+          for (var index = 0; index < len; index++) {
+            var element = opt.buttons[index];
+            var width = len == 1 ? 240 : 140;
+            actions.append(
+              '<button class="jscg-btn" style="width: ' +
+                width +
+                'px">' +
+                element.text +
+                "</button>"
+            );
+          }
+          // 关闭
+          _this.closeEle.on("click", function () {
+            _this.ele.remove();
+          });
+
+          actions.on("click", ".jscg-btn", function () {
+            var index = $(this).index(),
+              btnItem = opt.buttons[index];
+            if (btnItem.onCallback) {
+              btnItem.onCallback();
+              if (btnItem.hideModal) {
+                _this.closeEle.click();
+              }
+            } else {
+              _this.closeEle.click();
+            }
+          });
+        };
+
+        Modal.prototype.show = function () {};
+        Modal.prototype.hide = function () {
+          _this.close();
+        };
+
+        window.Modal = Modal;
+      })(window, document);
+
       $(".landscape label").on("change", ".landscape__item-title", function () {
         if ($(this).find("input:checked").length) {
           $(".pop").addClass("open");
