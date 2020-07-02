@@ -162,40 +162,79 @@
     <!-- Map -->
     <div class="map"></div>
     <!-- 弹窗 -->
-    <div class="pop">
+    <div class="pop open">
       <div class="pop__title aic"><span>苏州航道文化遗产总览</span><i></i></div>
       <div class="pop__content">
-        <div class="locations flex">
-          <div class="total">
+        <div class="locations aic">
+          <div class="locations__total">
             <p>文化遗产点</p>
             <strong>9</strong><span>处</span>
           </div>
-          <div class="location-list">
+          <div class="locations__list">
             <span>运河故道</span>
-            <span>运河故道</span>
-            <span>运河故道</span>
-            <span>运河故道</span>
-            <span>运河故道</span>
-            <span>运河故道</span>
-            <span>运河故道</span>
-            <span>运河故道</span>
-            <span>运河故道</span>
-            <span>运河故道</span>
+            <span>虎丘云岩寺塔</span>
+            <span>宝带桥</span>
+            <span>古纤道</span>
+            <span>寒山寺</span>
+            <span>寒山寺</span>
+            <span>寒山寺</span>
+            <span>寒山寺</span>
+            <span>寒山寺</span>
           </div>
         </div>
         <div class="left-item__intro">
-          <div class="swiper"></div>
-          <div class="infors">
-            <p>
-              苏州是大运河沿线唯一以“古城”概念申遗的城市，是大运河城市景观遗产的典型范例。苏州的运河故道、虎丘云岩寺塔、宝带桥、古纤道等7个相关点段被纳入中国大运河世界文化遗产目录。
-            </p>
-            <p>
-              苏州古城的遗产包括5条运河故道、7个遗产点段，共12个点段构成”一带一环”为特征的遗产地图，清晰地勾勒了一座完整的苏州古城，这在众多运河城市中是绝无仅有的。
-              试点航段内，主要包括了宝带桥、寒山寺和古纤道等。
-            </p>
+          <h3>苏州航道文化遗产简介</h3>
+          <div class="flex">
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./images/pic_01.png" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/pic_01.png" alt="" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/pic_01.png" alt="" />
+                </div>
+              </div>
+              <!-- 如果需要分页器 -->
+              <div class="swiper-pagination"></div>
+            </div>
+            <div class="infors">
+              <p>
+                苏州是大运河沿线唯一以“古城”概念申遗的城市，是大运河城市景观遗产的典型范例。苏州的运河故道、虎丘云岩寺塔、宝带桥、古纤道等7个相关点段被纳入中国大运河世界文化遗产目录。
+              </p>
+              <p>
+                苏州古城的遗产包括5条运河故道、7个遗产点段，共12个点段构成”一带一环”为特征的遗产地图，清晰地勾勒了一座完整的苏州古城，这在众多运河城市中是绝无仅有的。
+                试点航段内，主要包括了宝带桥、寒山寺和古纤道等。
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <script src="./js/jquery.1.9.1.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script>
+      var swiper = new Swiper(".swiper-container", {
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+
+      $(".landscape label").on("change", ".landscape__item-title", function () {
+        if ($(this).find("input:checked").length) {
+          $(".pop").addClass("open");
+        } else {
+          $(".pop").removeClass("open");
+        }
+      });
+      $(".pop__title").on("click", "i", function () {
+        $(this).parent().parent(".open").removeClass("open");
+      });
+    </script>
   </body>
 </html>
