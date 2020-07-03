@@ -19,6 +19,10 @@
   background-color: #2ec5d8;
 }
 
+body {
+  overflow: hidden;
+}
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -84,7 +88,7 @@
 }
 
 .user__name::after {
-  content: "";
+  content: '';
   display: inline-block;
   border: 5px solid transparent;
   border-top-color: rgba(255, 255, 255, 0.4);
@@ -122,7 +126,7 @@
 }
 
 .catalogue__title::before {
-  content: "";
+  content: '';
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -165,12 +169,12 @@
           justify-content: space-between;
 }
 
-.menu__item__title input[type="checkbox"] {
+.menu__item__title input[type='checkbox'] {
   margin-right: 10px;
 }
 
 .menu__item__title i {
-  content: "";
+  content: '';
   display: inline-block;
   border: 5px solid transparent;
   border-top-color: rgba(159, 245, 255, 0.8);
@@ -250,12 +254,9 @@
 .pop {
   position: absolute;
   z-index: 3;
-  width: 650px;
-  height: 530px;
   right: 20px;
   top: 50%;
   padding: 20px;
-  margin-top: -265px;
   background: rgba(16, 39, 87, 0.9);
   color: #fff;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
@@ -263,13 +264,42 @@
   border-radius: 10px;
   -webkit-transition: all ease-in-out 0.6s;
   transition: all ease-in-out 0.6s;
-  -webkit-transform: translateX(150%);
-          transform: translateX(150%);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 0;
+  -webkit-animation: popAnim 0.3s cubic-bezier(0, 0, 0.59, 1) 0.1s forwards;
+          animation: popAnim 0.3s cubic-bezier(0, 0, 0.59, 1) 0.1s forwards;
 }
 
 .pop.open {
   -webkit-transform: translateX(0);
           transform: translateX(0);
+}
+
+@-webkit-keyframes popAnim {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes popAnim {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 .pop__title {
@@ -286,11 +316,6 @@
   height: 20px;
   background: url("../images/guanbi.png") center no-repeat;
   cursor: pointer;
-}
-
-.locations {
-  padding: 0 0 20px;
-  border-bottom: 1px dashed #326d9e;
 }
 
 .locations__total {
@@ -336,6 +361,11 @@
   color: #50b8f0;
 }
 
+.left-item__intro {
+  margin-top: 20px;
+  border-top: 1px dashed #326d9e;
+}
+
 .left-item__intro h3 {
   font-size: 18px;
   font-weight: normal;
@@ -360,5 +390,54 @@
 
 .infors p {
   margin-bottom: 10px;
+}
+
+.chart__tab li {
+  height: 60px;
+  width: 210px;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.chart__tab li.active, .chart__tab li:hover {
+  background: url("../images/tabbg.png") center no-repeat;
+}
+
+.chart__tab li i {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  margin-right: 10px;
+}
+
+.chart__tab li:first-child i {
+  background: url("../images/luhua.png") center;
+}
+
+.chart__tab li:nth-child(2) i {
+  background: url("../images/huanjing.png") center;
+}
+
+.chart__tab li:nth-child(3) i {
+  background: url("../images/wushui.png") center;
+}
+
+.chart__tab li:nth-child(4) i {
+  background: url("../images/chongdianzhuang.png") center;
+}
+
+.chart__tab .chart__data div {
+  margin-top: 5px;
+  color: #51edff;
+}
+
+.chart__tab .chart__data div strong {
+  font-size: 20px;
+}
+
+.chart__content {
+  margin-left: 20px;
+  width: 270px;
+  height: 230px;
 }
 /*# sourceMappingURL=style.css.map */
