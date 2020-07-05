@@ -37,7 +37,7 @@
           <!-- item -->
           <div class="menu__item">
             <label class="menu__item__title aic" id="cultrueId">
-              <span><input type="checkbox" id="" />大运河文化带</span>
+              <span><input type="radio" name="menu" id="" />大运河文化带</span>
               <i></i>
             </label>
             <div class="landscape">
@@ -60,9 +60,7 @@
           <!-- item -->
           <div class="menu__item">
             <label class="menu__item__title aic" id="courseId">
-              <span
-                ><input type="checkbox" name="menu" id="" />大运河生态带</span
-              >
+              <span><input type="radio" name="menu" id="" />大运河生态带</span>
               <i></i>
             </label>
             <div class="landscape">
@@ -99,8 +97,29 @@
           <!-- item -->
           <div class="menu__item">
             <label class="menu__item__title aic">
+              <span><input type="radio" name="menu" id="" />大运河经济带</span>
+              <i></i>
+            </label>
+          </div>
+          <!-- item -->
+          <div class="menu__item">
+            <label class="menu__item__title aic" id="courseBenefitService">
+              <span><input type="radio" name="menu" id="" />航道惠民服务</span>
+              <i></i>
+            </label>
+          </div>
+          <!-- item -->
+          <div class="menu__item">
+            <label class="menu__item__title aic">
+              <span><input type="radio" name="menu" id="" />航道工作状态</span>
+              <i></i>
+            </label>
+          </div>
+          <!-- item -->
+          <div class="menu__item">
+            <label class="menu__item__title aic">
               <span
-                ><input type="checkbox" name="menu" id="" />大运河经济带</span
+                ><input type="radio" name="menu" id="" />大运河安全保障</span
               >
               <i></i>
             </label>
@@ -109,7 +128,7 @@
           <div class="menu__item">
             <label class="menu__item__title aic">
               <span
-                ><input type="checkbox" name="menu" id="" />航道惠民服务</span
+                ><input type="radio" name="menu" id="" />大运河现场监测</span
               >
               <i></i>
             </label>
@@ -117,34 +136,7 @@
           <!-- item -->
           <div class="menu__item">
             <label class="menu__item__title aic">
-              <span
-                ><input type="checkbox" name="menu" id="" />航道工作状态</span
-              >
-              <i></i>
-            </label>
-          </div>
-          <!-- item -->
-          <div class="menu__item">
-            <label class="menu__item__title aic">
-              <span
-                ><input type="checkbox" name="menu" id="" />大运河安全保障</span
-              >
-              <i></i>
-            </label>
-          </div>
-          <!-- item -->
-          <div class="menu__item">
-            <label class="menu__item__title aic">
-              <span
-                ><input type="checkbox" name="menu" id="" />大运河现场监测</span
-              >
-              <i></i>
-            </label>
-          </div>
-          <!-- item -->
-          <div class="menu__item">
-            <label class="menu__item__title aic">
-              <span><input type="checkbox" name="menu" id="" />示范航线</span>
+              <span><input type="radio" name="menu" id="" />示范航线</span>
               <i></i>
             </label>
           </div>
@@ -259,358 +251,137 @@
         </div>
       </div>
     </div>
-    <!--  -->
+    <!-- 航道惠民 -->
+    <div id="courseBenefitServicePopContent" style="display: none;">
+      <ul class="cbs__tab aic">
+        <li class="aic">
+          <i></i>
+          <div class="cbs__tab-info">
+            <p>服务区</p>
+            <strong>3</strong><span>个</span>
+          </div>
+        </li>
+        <li class="aic">
+          <i></i>
+          <div class="cbs__tab-info">
+            <p>锚地</p>
+            <strong>7</strong><span>个</span>
+          </div>
+        </li>
+        <li class="aic">
+          <i></i>
+          <div class="cbs__tab-info">
+            <p>充电桩</p>
+            <strong>27</strong><span>个</span>
+          </div>
+        </li>
+        <li class="aic">
+          <i></i>
+          <div class="cbs__tab-info">
+            <p>船闸</p>
+            <strong>3</strong><span>个</span>
+          </div>
+        </li>
+      </ul>
+      <div class="flex other__tab">
+        <span id="cbs__tab-content-title" style="visibility: hidden;"
+          >各行船闸数量分布</span
+        >
+        <span id="cbs__intro" class="active">惠民服务航道建设</span>
+      </div>
+      <div class="cbs__tab-content" style="display: none;">
+        <table class="service-table">
+          <tr>
+            <th></th>
+            <th>吴中水上服务区</th>
+            <th>太仓双凤水上服务区</th>
+            <th>昆山杨林塘水上服务区</th>
+          </tr>
+          <tr>
+            <td>船舶停靠位</td>
+            <td>3个</td>
+            <td>600米</td>
+            <td>187米</td>
+          </tr>
+          <tr>
+            <td>岸电设施</td>
+            <td>12个</td>
+            <td>10个</td>
+            <td>5个</td>
+          </tr>
+          <tr>
+            <td>油污接收装置</td>
+            <td>2套</td>
+            <td>--</td>
+            <td>1套(设计中)</td>
+          </tr>
+          <tr>
+            <td>物流快递</td>
+            <td>1套</td>
+            <td>--</td>
+            <td>--</td>
+          </tr>
+          <tr>
+            <td>船民休息室</td>
+            <td>1间</td>
+            <td>--</td>
+            <td>--</td>
+          </tr>
+          <tr>
+            <td>供水点</td>
+            <td>4个</td>
+            <td>--</td>
+            <td>--</td>
+          </tr>
+          <tr>
+            <td>自行车</td>
+            <td>12辆</td>
+            <td>--</td>
+            <td>--</td>
+          </tr>
+        </table>
+      </div>
+      <div
+        class="cbs__tab-content cbs-chart"
+        id="cbsChart"
+        style="display: none;"
+      ></div>
+      <div class="cbs__tab-content anchor-list flex" style="display: none;">
+        <div class="anchor">
+          <div class="pic"><img src="./images/anchor01.png" alt="" /></div>
+          <div class="info">
+            <p>虞山船闸</p>
+            <span>常熟市</span>
+          </div>
+        </div>
+        <div class="anchor">
+          <div class="pic"><img src="./images/anchor02.png" alt="" /></div>
+          <div class="info">
+            <p>张家港船闸</p>
+            <span>张家港</span>
+          </div>
+        </div>
+        <div class="anchor">
+          <div class="pic"><img src="./images/anchor03.png" alt="" /></div>
+          <div class="info">
+            <p>杨林船闸</p>
+            <span>太仓市</span>
+          </div>
+        </div>
+      </div>
+      <div class="cbs__build-intro" style="display: non;">
+        <p>
+          京杭运河苏州段是内河水运通道中通航条件最好、船舶通过量最大、社会经济效益最为显著的区域。通过水上服务区的建设，运营环境的日益成熟，靠泊的船舶日益增多，已成为船民靠岸补充能源、上岸办事的港湾。
+        </p>
+        <p>
+          伴随水上服务区的岸电一体化建设，极大推动苏州水运绿色转型，改善水运通道的大气环境和船民生活环境，促进经济社会可持续发展。其中，岸电设施由国网江苏电力提供资产管理、计量计费、统计分析、运行管理、客户服务等综合服务，船民一张卡可在全省境内的水上服务区通用，安全可靠、操作简单方便。
+        </p>
+      </div>
+    </div>
     <script src="./js/jquery.1.9.1.min.js"></script>
     <script src="./js/swiper.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/echarts/4.8.0/echarts.min.js"></script>
-    <script>
-      /**
-       * Modal
-       */
-
-      (function (window, document) {
-        var Modal = function (options) {
-          var defaults = {
-            title: '温馨提示',
-            content: '',
-            width: 440,
-            height: 260,
-            buttons: [
-              {
-                text: '确定',
-                hideModal: true,
-                onCallback: null,
-              },
-            ],
-          };
-          var opt = $.extend({}, defaults, options),
-            _this = this,
-            title = $(
-              '<div class="pop__title aic"><span>' + opt.title + '</span></div>'
-            ),
-            content = $('<div class="pop__content"></div>').html(opt.content),
-            // actions = $('<div class="jscg-alert__action"></div>'),
-            len = opt.buttons.length;
-
-          _this.ele = $('<div class="pop"></div>');
-          _this.closeEle = $('<i></i>');
-          title.append(_this.closeEle);
-          _this.ele.append(title).append(content);
-          _this.ele.css({
-            width: opt.width + 'px',
-            height: opt.height + 'px',
-            'margin-top': -opt.height / 2 + 'px',
-          });
-          $('body').append(_this.ele);
-
-          // for (var index = 0; index < len; index++) {
-          //   var element = opt.buttons[index];
-          //   var width = len == 1 ? 240 : 140;
-          //   actions.append(
-          //     '<button class="jscg-btn" style="width: ' +
-          //       width +
-          //       'px">' +
-          //       element.text +
-          //       '</button>'
-          //   );
-          // }
-          // 关闭
-          _this.closeEle.on('click', function () {
-            _this.ele.remove();
-          });
-
-          // actions.on('click', '.jscg-btn', function () {
-          //   var index = $(this).index(),
-          //     btnItem = opt.buttons[index];
-          //   if (btnItem.onCallback) {
-          //     btnItem.onCallback();
-          //     if (btnItem.hideModal) {
-          //       _this.closeEle.click();
-          //     }
-          //   } else {
-          //     _this.closeEle.click();
-          //   }
-          // });
-        };
-
-        Modal.prototype.show = function () {};
-        Modal.prototype.hide = function () {
-          // _this.close();
-          this.closeEle.click();
-        };
-
-        window.Modal = Modal;
-      })(window, document);
-
-      var modal;
-
-      var option1 = {
-        title: {
-          text: '各行政区绿化总里程分布',
-          textStyle: { color: '#32eafa', fontSize: 16 },
-          textAlign: 'left',
-          left: 'center',
-        },
-        tooltip: {
-          show: false,
-        },
-
-        series: [
-          {
-            name: '绿化总里程',
-            type: 'pie',
-            radius: ['40%', '60%'],
-            color: [
-              '#3bdd87',
-              '#6ba4f1',
-              '#32d7e6',
-              '#3565f1',
-              '#39c6a3',
-              '#ae9a6f',
-            ],
-            avoidLabelOverlap: true,
-            label: {
-              show: true,
-              formatter: function (params) {
-                return params.name + '\n' + params.value + 'km';
-              },
-            },
-            labelLine: {
-              show: false,
-              length: 8,
-              length2: 13,
-            },
-            hoverOffset: 5,
-            selectedOffset: 5,
-            data: [
-              { value: 28, name: '张家港' },
-              { value: 22, name: '吴中' },
-              { value: 12, name: '太仓1' },
-              { value: 14, name: '太仓2' },
-              { value: 13, name: '昆山' },
-              { value: 11, name: '常熟' },
-            ],
-          },
-        ],
-      };
-      var option3 = {
-        title: {
-          text: '各行政区污水回收设施分布',
-          textStyle: { color: '#32eafa', fontSize: 16 },
-          textAlign: 'left',
-          left: 'center',
-        },
-        tooltip: {
-          show: false,
-        },
-
-        series: [
-          {
-            name: '污水回收',
-            type: 'pie',
-            radius: ['40%', '60%'],
-            color: [
-              '#3bdd87',
-              '#6ba4f1',
-              '#32d7e6',
-              '#3565f1',
-              '#39c6a3',
-              '#ae9a6f',
-            ],
-            avoidLabelOverlap: true,
-            label: {
-              show: true,
-              formatter: function (params) {
-                return params.name + '\n' + params.percent + '%';
-              },
-            },
-            labelLine: {
-              show: false,
-              length: 8,
-              length2: 13,
-            },
-            hoverOffset: 5,
-            selectedOffset: 5,
-            data: [
-              { value: 2, name: '张家港' },
-              { value: 0, name: '吴中' },
-              { value: 1, name: '太仓1' },
-              { value: 1, name: '太仓2' },
-              { value: 0, name: '昆山' },
-              { value: 1, name: '常熟' },
-            ],
-          },
-        ],
-      };
-      var option2 = {
-        title: {
-          text: '各行政区环境监测设施分布',
-          textStyle: { color: '#32eafa', fontSize: 16 },
-          textAlign: 'left',
-          left: 'center',
-        },
-        tooltip: {
-          show: false,
-        },
-
-        series: [
-          {
-            name: '环境监测',
-            type: 'pie',
-            radius: ['40%', '60%'],
-            color: [
-              '#3bdd87',
-              '#6ba4f1',
-              '#32d7e6',
-              '#3565f1',
-              '#39c6a3',
-              '#ae9a6f',
-            ],
-            avoidLabelOverlap: true,
-            label: {
-              show: true,
-              formatter: function (params) {
-                return params.name + '\n' + params.percent + '%';
-              },
-            },
-            labelLine: {
-              show: false,
-              length: 8,
-              length2: 13,
-            },
-            hoverOffset: 5,
-            selectedOffset: 5,
-            data: [
-              { value: 2, name: '张家港' },
-              { value: 1, name: '吴中' },
-              { value: 2, name: '太仓1' },
-              { value: 1, name: '太仓2' },
-              { value: 1, name: '昆山' },
-              { value: 1, name: '常熟' },
-            ],
-          },
-        ],
-      };
-      var option4 = {
-        title: {
-          text: '各行政区充电桩设施分布',
-          textStyle: { color: '#32eafa', fontSize: 16 },
-          textAlign: 'left',
-          left: 'center',
-        },
-        tooltip: {
-          show: false,
-        },
-
-        series: [
-          {
-            name: '充电桩',
-            type: 'pie',
-            radius: ['40%', '60%'],
-            color: [
-              '#3bdd87',
-              '#6ba4f1',
-              '#32d7e6',
-              '#3565f1',
-              '#39c6a3',
-              '#ae9a6f',
-            ],
-            avoidLabelOverlap: true,
-            label: {
-              show: true,
-              formatter: function (params) {
-                return params.name + '\n' + params.percent + '%';
-              },
-            },
-            labelLine: {
-              show: false,
-              length: 8,
-              length2: 13,
-            },
-            hoverOffset: 5,
-            selectedOffset: 5,
-            data: [
-              { value: 2, name: '张家港' },
-              { value: 1, name: '吴中' },
-              { value: 2, name: '太仓1' },
-              { value: 5, name: '太仓2' },
-              { value: 3, name: '昆山' },
-              { value: 4, name: '常熟' },
-            ],
-          },
-        ],
-      };
-
-      var myChart;
-      $('#courseId').on('change', 'span', function () {
-        if ($(this).find('input:checked').length) {
-          modal = new Modal({
-            title: '苏州航道文化遗产总览',
-            content: $('#course').html(),
-            width: 650,
-            height: 620,
-          });
-          var swiper = new Swiper('.swiper-container', {
-            loop: true,
-            pagination: {
-              el: '.swiper-pagination',
-              clickable: true,
-            },
-          });
-
-          /// chart
-          var content = $('.pop').find('.chart__content')[0];
-
-          myChart = echarts.init(content);
-          myChart.setOption(option1);
-        } else {
-          modal.hide();
-        }
-      });
-
-      $('#cultrueId').on('change', 'span', function () {
-        if ($(this).find('input:checked').length) {
-          modal = new Modal({
-            title: '苏州航道文化遗产总览',
-            content: $('#cultrue').html(),
-            width: 650,
-            height: 620,
-          });
-          var swiper = new Swiper('.swiper-container', {
-            loop: true,
-            pagination: {
-              el: '.swiper-pagination',
-              clickable: true,
-            },
-          });
-        } else {
-          modal.hide();
-        }
-      });
-
-      $('body').on('click', '.chart__tab li', function () {
-        var index = $(this).index();
-        console.log(index);
-        $('.chart__tab li').removeClass('active');
-        $(this).addClass('active');
-
-        switch (index) {
-          case 0:
-            myChart.setOption(option1);
-            break;
-          case 1:
-            myChart.setOption(option2);
-            break;
-          case 2:
-            myChart.setOption(option3);
-            break;
-          case 3:
-            myChart.setOption(option4);
-            break;
-          default:
-            break;
-        }
-      });
-    </script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>

@@ -155,12 +155,11 @@ body {
 }
 .menu__item__title {
   justify-content: space-between;
-  input[type='checkbox'] {
+  input[type='radio'] {
     margin-right: 10px;
   }
 
-  i {
-    content: '';
+  & > i {
     display: inline-block;
     border: 5px solid transparent;
     border-top-color: rgba($color: #9ff5ff, $alpha: 0.8);
@@ -244,10 +243,10 @@ body {
   color: #fff;
   box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.4);
   border-radius: 10px;
-  transition: all ease-in-out 0.6s;
+  transition: all cubic-bezier(0, 0.82, 0.16, 0.99) 0.3s;
   transform: translateX(0);
   opacity: 0;
-  animation: popAnim 0.3s cubic-bezier(0, 0, 0.59, 1) 0.1s forwards;
+  animation: popAnim 0.3s cubic-bezier(0, 0.82, 0.16, 0.99) 0.1s forwards;
 
   &.open {
     transform: translateX(0);
@@ -393,4 +392,145 @@ body {
   margin-left: 20px;
   width: 270px;
   height: 230px;
+}
+
+.cbs__tab {
+  justify-content: space-between;
+  border-bottom: 1px dashed #326d9e;
+  li {
+    padding: 0 20px 20px;
+    cursor: pointer;
+    &.active,
+    &:hover {
+      background: -moz-linear-gradient(
+        top,
+        rgba(50, 234, 250, 0) 0%,
+        rgba(50, 234, 250, 0.4) 100%
+      );
+      background: -webkit-linear-gradient(
+        top,
+        rgba(50, 234, 250, 0) 0%,
+        rgba(50, 234, 250, 0.4) 100%
+      );
+      background: linear-gradient(
+        to bottom,
+        rgba(50, 234, 250, 0) 0%,
+        rgba(50, 234, 250, 0.4) 100%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0032eafa', endColorstr='#6632eafa',GradientType=0 ); /* IE6-9 */
+    }
+    & > i {
+      display: inline-block;
+      width: 56px;
+      height: 56px;
+      background: url('../images/cbs_tab01.png') center no-repeat;
+    }
+    .cbs__tab-info {
+      margin-left: 12px;
+      color: #32eafa;
+      p {
+        color: #fff;
+        margin-bottom: 5px;
+      }
+      strong {
+        font-size: 30px;
+      }
+    }
+
+    &:nth-child(2) {
+      & > i {
+        background: url('../images/cbs_tab02.png') center no-repeat;
+      }
+    }
+
+    &:nth-child(3) {
+      & > i {
+        background: url('../images/cbs_tab03.png') center no-repeat;
+      }
+    }
+
+    &:nth-child(4) {
+      & > i {
+        background: url('../images/cbs_tab04.png') center no-repeat;
+      }
+    }
+  }
+}
+
+.other__tab {
+  padding: 15px 0;
+  justify-content: space-between;
+
+  span {
+    font-size: 18px;
+    color: #57bbde;
+    width: 195px;
+    line-height: 38px;
+    text-align: center;
+    border: 1px solid #57bbde;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &.active {
+      background: #57bbde;
+      color: #fff;
+    }
+  }
+}
+
+.service-table {
+  background: #132245;
+  width: 100%;
+  td,
+  th {
+    color: #31e1f2;
+    padding: 8px 10px;
+    border: 1px solid rgba($color: #0b6467, $alpha: 0.5);
+  }
+  th {
+    font-weight: bold;
+  }
+}
+
+.cbs__build-intro {
+  text-indent: 2em;
+  line-height: 1.5;
+  max-height: 260px;
+  overflow-y: scroll;
+}
+
+.anchor-list {
+  justify-content: space-around;
+  margin-top: 30px;
+
+  .anchor {
+    width: 128px;
+    height: 180px;
+    background: url('../images/anchor_bgpng.png') 0 30px no-repeat;
+    text-align: center;
+    .pic {
+      width: 90px;
+      height: 90px;
+      padding: 5px;
+      border-radius: 100px;
+      border: 1px solid rgba($color: #2ec5d8, $alpha: 0.4);
+      margin: 0 auto 20px;
+      img {
+        width: 100%;
+      }
+    }
+
+    .info {
+      span {
+        display: inline-block;
+        margin-top: 5px;
+        color: #2ec5d8;
+      }
+    }
+  }
+}
+
+.cbs-chart {
+  height: 260px;
+  width: 610px;
 }
