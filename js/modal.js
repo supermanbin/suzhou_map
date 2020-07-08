@@ -6,6 +6,7 @@
     var defaults = {
       title: '温馨提示',
       content: '',
+      iframeSrc: '',
       width: 440,
       height: 260,
       buttons: [
@@ -28,14 +29,30 @@
         _this.ele = $('.pop');
         _this.closeEle = _this.ele.find('.pop__title i');
         title = _this.ele.find('.pop__title span').html(opt.title);
-        content = _this.ele.find('.pop__content').html(opt.content);
+        content = _this.ele
+          .find('iframe')
+          .attr('src', opt.iframeSrc)
+          .css({
+            width: opt.width - 40 + 'px',
+            height: opt.height - 90 + 'px',
+            background: 'transparent',
+          });
       } else {
         _this.ele = $('<div class="pop"></div>');
         _this.closeEle = $('<i></i>');
         title = $(
           '<div class="pop__title aic"><span>' + opt.title + '</span></div>'
         );
-        content = $('<div class="pop__content"></div>').html(opt.content);
+        $iframe = $(
+          '<iframe src="' + opt.iframeSrc + '" frameborder="0" ></iframe>'
+        );
+        $iframe.css({
+          width: opt.width - 40 + 'px',
+          height: opt.height - 90 + 'px',
+          background: 'transparent',
+        });
+        content = $('<div class="pop__content"></div>');
+        content.append($iframe);
         title.append(_this.closeEle);
         _this.ele.append(title).append(content);
         $('body').append(_this.ele);

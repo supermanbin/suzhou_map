@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <title>苏州航道三维实景综合监管平台</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/swiper.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- 航道惠民 -->
+    <div id="courseBenefitServicePopContent" style="color: #fff;">
+      <ul class="cbs__tab aic">
+        <li class="aic">
+          <i></i>
+          <div class="cbs__tab-info">
+            <p>服务区</p>
+            <strong>3</strong><span>个</span>
+          </div>
+        </li>
+        <li class="aic">
+          <i></i>
+          <div class="cbs__tab-info">
+            <p>锚地</p>
+            <strong>7</strong><span>个</span>
+          </div>
+        </li>
+        <li class="aic">
+          <i></i>
+          <div class="cbs__tab-info">
+            <p>充电桩</p>
+            <strong>27</strong><span>个</span>
+          </div>
+        </li>
+        <li class="aic">
+          <i></i>
+          <div class="cbs__tab-info">
+            <p>船闸</p>
+            <strong>3</strong><span>个</span>
+          </div>
+        </li>
+      </ul>
+      <div class="flex other__tab">
+        <span id="cbs__tab-content-title" style="visibility: hidden;"
+          >各行船闸数量分布</span
+        >
+        <span id="cbs__intro" class="active">惠民服务航道建设</span>
+      </div>
+      <div class="cbs__tab-content" style="display: none;">
+        <table class="service-table">
+          <tr>
+            <th></th>
+            <th>吴中水上服务区</th>
+            <th>太仓双凤水上服务区</th>
+            <th>昆山杨林塘水上服务区</th>
+          </tr>
+          <tr>
+            <td>船舶停靠位</td>
+            <td>3个</td>
+            <td>600米</td>
+            <td>187米</td>
+          </tr>
+          <tr>
+            <td>岸电设施</td>
+            <td>12个</td>
+            <td>10个</td>
+            <td>5个</td>
+          </tr>
+          <tr>
+            <td>油污接收装置</td>
+            <td>2套</td>
+            <td>--</td>
+            <td>1套(设计中)</td>
+          </tr>
+          <tr>
+            <td>物流快递</td>
+            <td>1套</td>
+            <td>--</td>
+            <td>--</td>
+          </tr>
+          <tr>
+            <td>船民休息室</td>
+            <td>1间</td>
+            <td>--</td>
+            <td>--</td>
+          </tr>
+          <tr>
+            <td>供水点</td>
+            <td>4个</td>
+            <td>--</td>
+            <td>--</td>
+          </tr>
+          <tr>
+            <td>自行车</td>
+            <td>12辆</td>
+            <td>--</td>
+            <td>--</td>
+          </tr>
+        </table>
+      </div>
+      <div
+        class="cbs__tab-content cbs-chart"
+        id="cbsChart"
+        style="display: none;"
+      ></div>
+      <div class="cbs__tab-content anchor-list flex" style="display: none;">
+        <div class="anchor">
+          <div class="pic"><img src="./images/anchor01.png" alt="" /></div>
+          <div class="info">
+            <p>虞山船闸</p>
+            <span>常熟市</span>
+          </div>
+        </div>
+        <div class="anchor">
+          <div class="pic"><img src="./images/anchor02.png" alt="" /></div>
+          <div class="info">
+            <p>张家港船闸</p>
+            <span>张家港</span>
+          </div>
+        </div>
+        <div class="anchor">
+          <div class="pic"><img src="./images/anchor03.png" alt="" /></div>
+          <div class="info">
+            <p>杨林船闸</p>
+            <span>太仓市</span>
+          </div>
+        </div>
+      </div>
+      <div class="cbs__build-intro" style="display: non;">
+        <p>
+          京杭运河苏州段是内河水运通道中通航条件最好、船舶通过量最大、社会经济效益最为显著的区域。通过水上服务区的建设，运营环境的日益成熟，靠泊的船舶日益增多，已成为船民靠岸补充能源、上岸办事的港湾。
+        </p>
+        <p>
+          伴随水上服务区的岸电一体化建设，极大推动苏州水运绿色转型，改善水运通道的大气环境和船民生活环境，促进经济社会可持续发展。其中，岸电设施由国网江苏电力提供资产管理、计量计费、统计分析、运行管理、客户服务等综合服务，船民一张卡可在全省境内的水上服务区通用，安全可靠、操作简单方便。
+        </p>
+      </div>
+    </div>
+    <script src="./js/jquery.1.9.1.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/4.8.0/echarts.min.js"></script>
+    <script src="./js/pages/courseService.js"></script>
+  </body>
+</html>
