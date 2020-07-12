@@ -204,7 +204,7 @@ $(function () {
 
   $('.chart__tab').on('click', 'li', function () {
     var index = $(this).index();
-    console.log(index);
+
     $('.chart__tab li').removeClass('active');
     $(this).addClass('active');
 

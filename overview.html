@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <title>苏州航道三维实景综合监管平台</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/swiper.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- 航道 -->
+    <div id="course" style="color: #fff;">
+      <div class="chart aic">
+        <!--  -->
+        <div class="locations__total total-distance">
+          <p>总里程</p>
+          <strong>721.06</strong><span>公里</span>
+        </div>
+        <ul class="chart__tab chart__tab--140">
+          <li class="aic active">
+            <div class="chart__data">
+              <p>三级航道</p>
+              <div><strong>97.7</strong><span>公里</span></div>
+            </div>
+          </li>
+          <li class="aic">
+            <div class="chart__data">
+              <p>四级航道</p>
+              <div><strong>9</strong><span>个</span></div>
+            </div>
+          </li>
+          <li class="aic">
+            <div class="chart__data">
+              <p>五级航道</p>
+              <div><strong>7</strong><span>个</span></div>
+            </div>
+          </li>
+          <li class="aic">
+            <div class="chart__data">
+              <p>六级航道</p>
+              <div><strong>17</strong><span>个</span></div>
+            </div>
+          </li>
+        </ul>
+        <div class="chart__content"></div>
+      </div>
+      <div class="left-item__intro">
+        <!-- <h3>全市各行政区航道里程占比(km)</h3> -->
+        <div class="course-rate" id="courseRate"></div>
+      </div>
+    </div>
+    <script src="./js/jquery.1.9.1.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/4.8.0/echarts.min.js"></script>
+    <script src="./js/pages/overview.js"></script>
+  </body>
+</html>

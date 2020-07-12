@@ -54,12 +54,12 @@ $(function () {
     }
   });
 
-  // $('#courseId').on('change', 'span', function () {
-  //   var modal = new Modal({
-  //     title: '苏州绿色环保航道总览',
-  //     content: $('#course').html(),
-  //     width: 650,
-  //     height: 620,
-  //   });
-  // });
+  $('.catalogue__title').on('click', function () {
+    var overview = new Modal({
+      title: '苏州航道概览',
+      iframeSrc: './overview.html',
+      width: 650,
+      height: 645,
+    });
+  });
 });

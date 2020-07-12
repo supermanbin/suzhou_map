@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <title>苏州航道三维实景综合监管平台</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/swiper.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- 航道安全保障概览 -->
+    <div id="" style="color: #fff;">
+      <ul class="cbs__tab es__tab aic">
+        <li class="aic">
+          <i></i>
+          <div class="cbs__tab-info">
+            <p>航标</p>
+            <strong>157</strong><span>个</span>
+          </div>
+        </li>
+        <li class="aic">
+          <i></i>
+          <div class="cbs__tab-info">
+            <p>标志标牌</p>
+            <strong>82</strong><span>个</span>
+          </div>
+        </li>
+        <li class="aic">
+          <i></i>
+          <div class="cbs__tab-info">
+            <p>水上碍航</p>
+            <strong>---</strong>
+          </div>
+        </li>
+        <li class="aic">
+          <i></i>
+          <div class="cbs__tab-info">
+            <p>水下碍航</p>
+            <strong>8.26</strong><span>m³</span>
+          </div>
+        </li>
+        <li class="aic">
+          <i></i>
+          <div class="cbs__tab-info">
+            <p>驳岸损毁</p>
+            <strong>---</strong>
+          </div>
+        </li>
+        <li class="aic">
+          <i></i>
+          <div class="cbs__tab-info">
+            <p>水下停泊困难</p>
+            <strong>---</strong>
+          </div>
+        </li>
+      </ul>
+      <div class="flex other__tab">
+        <span id="cbs__tab-content-title" style="visibility: hidden;"></span>
+        <span id="cbs__intro" class="active">航道安全保障工作</span>
+      </div>
+      <!-- 航标 -->
+      <div class="cbs__tab-content" style="display: none;">
+        <div class="flex">
+          <div
+            id="navigationMarkChart"
+            class="navigation-mark"
+            style="width: 310px; height: 300px;"
+          ></div>
+          <div class="navigation-mark-info">
+            <div class="navigation-mark-info__title">
+              <p>全市标完好率：</p>
+              <strong>98.12</strong>%
+            </div>
+            <div class="navigation-mark-info__detail">
+              <p>航标损坏情况统计：</p>
+              <div class="justify-sb">
+                <span>航标不发光：3个</span>
+                <span>电板不充电：4个</span>
+                <span>电压低：1个</span>
+                <span>闪光有误：3个</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 标志牌 -->
+      <div class="cbs__tab-content" style="display: none;">
+        <div class="flex mark-chart">
+          <div class="chart-warp">
+            <p>京杭运河苏州段<br />标志标牌损坏情况统计</p>
+            <div class="water" id="water"></div>
+          </div>
+          <div class="chart-warp">
+            <p>京杭运河苏州段<br />标志标牌完好率</p>
+            <div class="good" id="good"></div>
+          </div>
+        </div>
+      </div>
+      <!-- 水下碍航 -->
+      <div
+        class="cbs__tab-content aic"
+        style="display: none; justify-content: center; height: 200px;"
+      >
+        <div><strong>暂无数据</strong></div>
+      </div>
+      <!-- 水下碍航 -->
+      <div
+        class="cbs__tab-content aic"
+        style="display: none; justify-content: center; height: 200px;"
+      >
+        <div><strong>暂无数据</strong></div>
+      </div>
+      <!-- 驳岸损毁 -->
+      <div class="cbs__tab-content" style="display: none;">
+        <div class="flex mark-chart">
+          <div class="chart-warp">
+            <p>驳岸损毁里程</p>
+            <div class="water" id="breakDistance"></div>
+          </div>
+          <div class="chart-warp">
+            <p>驳岸损毁率</p>
+            <div class="good" id="breakRate"></div>
+          </div>
+        </div>
+      </div>
+      <!-- 水下停泊困难 -->
+      <div
+        class="cbs__tab-content aic"
+        style="display: none; justify-content: center; height: 200px;"
+      >
+        <div><strong>暂无数据</strong></div>
+      </div>
+      <div class="cbs__build-intro" style="display: non;">
+        <p>
+          京杭运河苏州段是内河水运通道中通航条件最好、船舶通过量最大、社会经济效益最为显著的区域。通过水上服务区的建设，运营环境的日益成熟，靠泊的船舶日益增多，已成为船民靠岸补充能源、上岸办事的港湾。
+        </p>
+        <p>
+          伴随水上服务区的岸电一体化建设，极大推动苏州水运绿色转型，改善水运通道的大气环境和船民生活环境，促进经济社会可持续发展。其中，岸电设施由国网江苏电力提供资产管理、计量计费、统计分析、运行管理、客户服务等综合服务，船民一张卡可在全省境内的水上服务区通用，安全可靠、操作简单方便。
+        </p>
+      </div>
+    </div>
+    <script src="./js/jquery.1.9.1.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/4.8.0/echarts.min.js"></script>
+    <script src="./js/echarts-liquidfill.min.js"></script>
+    <script src="./js/pages/ensureSafety.js"></script>
+  </body>
+</html>

@@ -223,24 +223,27 @@ $(function () {
   };
 
   $('.cbs__tab').on('click', 'li', function () {
-    var index = $(this).index() > 1 ? $(this).index() - 1 : $(this).index();
+    var $this = $(this);
+    var index = $this.index() > 1 ? $this.index() - 1 : $this.index();
     $('.cbs__build-intro').hide();
     $('.cbs__tab li').removeClass('active');
-    $(this).addClass('active');
+    $this.addClass('active');
     $('.other__tab span').css({ visibility: 'visible' }).addClass('active');
     $('.other__tab span:last-child').removeClass('active');
-    $(this).parent().siblings('.cbs__tab-content').hide().eq(index).show();
-
+    $this.parent().siblings('.cbs__tab-content').hide().eq(index).show();
+    $('#cbs__tab-content-title').text(
+      '各行' + $this.find('p').text() + '数量分布'
+    );
     var chartDom = $('.cbs-chart');
     var CBSChart = echarts.init(chartDom[0]);
-    if ($(this).index() == 1) {
+    if ($this.index() == 1) {
       CBSChart.clear();
       chartDom.css({
         background: '',
       });
       CBSChart.setOption(CBSOption1);
     }
-    if ($(this).index() == 2) {
+    if ($this.index() == 2) {
       CBSChart.clear();
       chartDom.css({
         background: 'url("./images/chart_bg.png") center bottom no-repeat',
@@ -250,14 +253,14 @@ $(function () {
   });
 
   $('#cbs__intro').on('click', function () {
-    // $('.other__tab span').css({ visibility: 'hidden' }).removeClass('active');
+    $('.cbs__tab li').removeClass('active');
     $(this)
       .css({ visibility: 'visiable' })
       .addClass('active')
       .siblings('span')
       .css({ visibility: 'hidden' })
       .removeClass('active');
-    // $(this).addClass('active');
+
     $('.cbs__tab-content').hide();
     $('.cbs__build-intro').show();
   });

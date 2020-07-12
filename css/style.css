@@ -339,6 +339,12 @@ body {
   color: #32eafa;
 }
 
+.total-distance {
+  padding-top: 10px;
+  margin: 0 25px 0 15px;
+  background: url("../images/total_distance_bg.png") center no-repeat;
+}
+
 .locations__list {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -399,7 +405,10 @@ body {
 }
 
 .chart__tab li.active, .chart__tab li:hover {
-  background: url("../images/tabbg.png") center no-repeat;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(16, 176, 190, 0)), color-stop(40%, rgba(16, 176, 190, 0.3)), color-stop(60%, rgba(16, 176, 190, 0.3)), to(rgba(16, 176, 190, 0)));
+  background: linear-gradient(to right, rgba(16, 176, 190, 0) 0%, rgba(16, 176, 190, 0.3) 40%, rgba(16, 176, 190, 0.3) 60%, rgba(16, 176, 190, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0010b0be', endColorstr='#0010b0be',GradientType=1 );
+  /* IE6-9 */
 }
 
 .chart__tab li i {
@@ -434,9 +443,14 @@ body {
   font-size: 20px;
 }
 
+.chart__tab--140 li {
+  width: 140px;
+  padding-left: 30px;
+}
+
 .chart__content {
   margin-left: 20px;
-  width: 270px;
+  width: 250px;
   height: 230px;
 }
 
@@ -502,7 +516,7 @@ body {
 .other__tab span {
   font-size: 18px;
   color: #57bbde;
-  width: 195px;
+  padding: 0 15px;
   line-height: 38px;
   text-align: center;
   border: 1px solid #57bbde;
@@ -573,5 +587,147 @@ body {
 .cbs-chart {
   height: 260px;
   width: 610px;
+}
+
+.es__tab {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.es__tab li {
+  padding: 0 0 0 23px;
+  width: 175px;
+  height: 73px;
+  margin-bottom: 10px;
+}
+
+.es__tab li.active, .es__tab li:hover {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(16, 176, 190, 0)), color-stop(40%, rgba(16, 176, 190, 0.3)), color-stop(60%, rgba(16, 176, 190, 0.3)), to(rgba(16, 176, 190, 0)));
+  background: linear-gradient(to right, rgba(16, 176, 190, 0) 0%, rgba(16, 176, 190, 0.3) 40%, rgba(16, 176, 190, 0.3) 60%, rgba(16, 176, 190, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0010b0be', endColorstr='#0010b0be',GradientType=1 );
+  /* IE6-9 */
+}
+
+.es__tab li > i {
+  background: url("../images/es_icon01.png") center no-repeat;
+}
+
+.es__tab li:nth-child(2) > i {
+  background: url("../images/es_icon02.png") center no-repeat;
+}
+
+.es__tab li:nth-child(3) > i {
+  background: url("../images/es_icon03.png") center no-repeat;
+}
+
+.es__tab li:nth-child(4) > i {
+  background: url("../images/es_icon04.png") center no-repeat;
+}
+
+.es__tab li:nth-child(5) > i {
+  background: url("../images/es_icon05.png") center no-repeat;
+}
+
+.es__tab li:nth-child(6) > i {
+  background: url("../images/es_icon06.png") center no-repeat;
+}
+
+.navigation-mark-info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 40px;
+  color: #32eafa;
+  font-size: 16px;
+}
+
+.navigation-mark-info__title {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #22698c;
+  margin-bottom: 15px;
+}
+
+.navigation-mark-info__title strong {
+  font-size: 26px;
+  margin-right: 5px;
+}
+
+.navigation-mark-info__detail div {
+  margin-top: 15px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.navigation-mark-info__detail div span {
+  margin-bottom: 10px;
+}
+
+.mark-chart {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.mark-chart .chart-warp {
+  position: relative;
+  background: url("../images/mark-chart-bg.png") center bottom no-repeat;
+}
+
+.mark-chart .chart-warp p {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  color: #32eafa;
+  font-size: 16px;
+}
+
+.mark-chart div {
+  width: 180px;
+  height: 240px;
+}
+
+.course-rate {
+  height: 280px;
+}
+
+.work-state-tab li {
+  padding: 0 10px 20px;
+}
+
+.work-state-tab li:nth-child(1) > i {
+  background: url("../images/work_state01.png") center no-repeat;
+}
+
+.work-state-tab li:nth-child(2) > i {
+  background: url("../images/work_state02.png") center no-repeat;
+}
+
+.work-state-tab li:nth-child(3) > i {
+  background: url("../images/work_state03.png") center no-repeat;
+}
+
+.work-state-tab li:nth-child(4) > i {
+  background: url("../images/work_state04.png") center no-repeat;
+}
+
+.work-state-charts {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  padding-top: 15px;
+}
+
+.work-state-charts .conservation {
+  width: 280px;
+  height: 270px;
+}
+
+.work-state-charts .progress {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 /*# sourceMappingURL=style.css.map */

@@ -6,7 +6,7 @@ var leftMenuListData = [
       title: '苏州航道文化遗产总览',
       iframeHref: './cultrue.html',
       width: 650,
-      height: 430,
+      height: 530,
     },
     landscape: [
       {
@@ -60,9 +60,21 @@ var leftMenuListData = [
   },
   {
     menuTitle: '航道工作状态',
+    modal: {
+      title: '航道安全保障概览',
+      iframeHref: './courseWorkState.html',
+      width: 650,
+      height: 460,
+    },
   },
   {
     menuTitle: '大运河安全保障',
+    modal: {
+      title: '航道安全保障概览',
+      iframeHref: '/ensureSafety.html',
+      width: 650,
+      height: 570,
+    },
   },
   {
     menuTitle: '大运河现场监测',
