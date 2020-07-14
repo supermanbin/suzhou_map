@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <title>苏州航道三维实景综合监管平台</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/swiper.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- 航道安全保障概览 -->
+    <div id="" style="color: #fff;">
+      <ul class="cbs__tab es__tab aic">
+        <li class="aic active">
+          <i></i>
+          <div class="cbs__tab-info">
+            <p>视频监控</p>
+            <strong>4</strong><span>个</span>
+          </div>
+        </li>
+        <li class="aic">
+          <i></i>
+          <div class="cbs__tab-info">
+            <p>水位监测</p>
+            <strong>6</strong><span>个</span>
+          </div>
+        </li>
+        <li class="aic">
+          <i></i>
+          <div class="cbs__tab-info">
+            <p>航标遥测</p>
+            <strong>---</strong>
+          </div>
+        </li>
+        <li class="aic">
+          <i></i>
+          <div class="cbs__tab-info">
+            <p>流量监测</p>
+            <strong>---</strong>
+          </div>
+        </li>
+        <li class="aic">
+          <i></i>
+          <div class="cbs__tab-info">
+            <p>沉降监测</p>
+            <strong>---</strong>
+          </div>
+        </li>
+        <li class="aic">
+          <i></i>
+          <div class="cbs__tab-info">
+            <p>污粉尘监测</p>
+            <strong>---</strong>
+          </div>
+        </li>
+      </ul>
+      <div class="videos aic">
+        <div>重点位置视频直播窗口</div>
+        <div>重点位置航道水位显示</div>
+      </div>
+      <!-- 视频监控 -->
+      <div class="cbs__tab-content">
+        <div class="flex">
+          <div
+            id="navigationMarkChart"
+            class="navigation-mark"
+            style="width: 310px; height: 300px;"
+          ></div>
+          <div class="navigation-mark-info">
+            <div class="navigation-mark-info__detail">
+              <p>吴中视频监控信息</p>
+              <ul>
+                <li>
+                  <p>石湖大桥-绕城高速桥</p>
+                  <strong>1个</strong>
+                </li>
+                <li>
+                  <p>石湖大桥-绕城高速桥</p>
+                  <strong>1个</strong>
+                </li>
+                <li>
+                  <p>石湖大桥-绕城高速桥</p>
+                  <strong>1个</strong>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 水位监测 -->
+      <div
+        class="cbs__tab-content aic"
+        style="display: none; justify-content: center; height: 200px;"
+      >
+        <div><strong>暂无数据</strong></div>
+        <!-- <div class="flex mark-chart">
+          <div class="chart-warp">
+            <p>京杭运河苏州段<br />标志标牌损坏情况统计</p>
+            <div class="water" id="water"></div>
+          </div>
+          <div class="chart-warp">
+            <p>京杭运河苏州段<br />标志标牌完好率</p>
+            <div class="good" id="good"></div>
+          </div>
+        </div> -->
+      </div>
+      <!-- 航标遥测 -->
+      <div
+        class="cbs__tab-content aic"
+        style="display: none; justify-content: center; height: 200px;"
+      >
+        <div><strong>暂无数据</strong></div>
+      </div>
+      <!-- 流量监测 -->
+      <div
+        class="cbs__tab-content aic"
+        style="display: none; justify-content: center; height: 200px;"
+      >
+        <div><strong>暂无数据</strong></div>
+      </div>
+      <!-- 沉降监测 -->
+      <div
+        class="cbs__tab-content aic"
+        style="display: none; justify-content: center; height: 200px;"
+      >
+        <div><strong>暂无数据</strong></div>
+        <!-- <div class="flex mark-chart">
+          <div class="chart-warp">
+            <p>驳岸损毁里程</p>
+            <div class="water" id="breakDistance"></div>
+          </div>
+          <div class="chart-warp">
+            <p>驳岸损毁率</p>
+            <div class="good" id="breakRate"></div>
+          </div>
+        </div> -->
+      </div>
+      <!-- 污粉尘监测 -->
+      <div
+        class="cbs__tab-content aic"
+        style="display: none; justify-content: center; height: 200px;"
+      >
+        <div><strong>暂无数据</strong></div>
+      </div>
+    </div>
+    <script src="./js/jquery.1.9.1.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/4.8.0/echarts.min.js"></script>
+    <script src="./js/echarts-liquidfill.min.js"></script>
+    <script src="./js/pages/live.js"></script>
+  </body>
+</html>

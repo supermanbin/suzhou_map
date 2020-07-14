@@ -78,9 +78,21 @@ var leftMenuListData = [
   },
   {
     menuTitle: '大运河现场监测',
+    modal: {
+      title: '航道现场监测概览',
+      iframeHref: './live.html',
+      width: 595,
+      height: 710,
+    },
   },
   {
     menuTitle: '示范航线',
+    modal: {
+      title: '苏州航道示范航线概览',
+      iframeHref: './demoCourse.html',
+      width: 690,
+      height: 530,
+    },
   },
 ];
 window.leftMenuListData = leftMenuListData;

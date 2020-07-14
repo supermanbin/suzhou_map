@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <title>苏州航道三维实景综合监管平台</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/swiper.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- 文化遗产弹窗 -->
+    <div id="cultrue" style="color: #fff;">
+      <div class="locations flex">
+        <div class="locations__total demo-course">
+          <p>示范航线总里程</p>
+          <strong>348.86</strong><span>公里</span>
+        </div>
+        <div class="demo-course__chart">
+          <div class="cahrt-wrap">
+            <div id="count"></div>
+            <p>示范航线数量</p>
+          </div>
+          <div class="cahrt-wrap">
+            <div id="rate"></div>
+            <p>示范航线通达率</p>
+          </div>
+          <div class="cahrt-wrap">
+            <div id="qualifiedRate"></div>
+            <p>规划里程达标率</p>
+          </div>
+        </div>
+      </div>
+      <div class="left-item__intro">
+        <h3>苏州航道示范航线建设情况</h3>
+        <div class="flex">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./images/pic_01.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/pic_01.png" alt="" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./images/pic_01.png" alt="" />
+              </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="infors">
+            <p>
+              随着现代综合交通运输体系建设的推进，内河集装箱运输被提上议事日程，近年来苏州水运快速发展，构建“一环八射”的内河集装箱运输通道，依托长江、京杭运河、望虞河、申张线、苏申内港线、苏申外港线、杨林塘等航道，形成集装箱水运环路，并向外辐射至太仓港、南通港、上海港、宁波港以及湖州、嘉兴、无锡等地。经过近12年的建设，累计投资109亿元，建成三级航道173公里、桥梁68座、船闸2座、水上服务区3处，规划里程达标率提升为41%，已覆盖80%的县级区域，“畅通高效、通江达海”的干线航道网已现雏形。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/jquery.1.9.1.min.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/4.8.0/echarts.min.js"></script>
+    <script src="./js/echarts-liquidfill.min.js"></script>
+    <script src="./js/pages/demoCourse.js"></script>
+  </body>
+</html>

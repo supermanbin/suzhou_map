@@ -709,3 +709,38 @@ body {
     flex: 1;
   }
 }
+
+.demo-course {
+  width: 214px;
+  color: RGBA(49, 222, 240, 1);
+  background: url('../images/demo_course_icon.png') center bottom no-repeat;
+}
+.demo-course__chart {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  .cahrt-wrap {
+    color: #32eafa;
+    div {
+      width: 95px;
+      height: 95px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.videos {
+  justify-content: space-between;
+  padding: 15px 10px;
+  border-bottom: 1px dashed #326d9e;
+  margin-bottom: 20px;
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    height: 160px;
+    background-color: rgba($color: #000, $alpha: 0.2);
+  }
+}
