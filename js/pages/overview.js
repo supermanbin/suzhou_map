@@ -9,6 +9,9 @@ $(function () {
     },
     tooltip: {
       show: true,
+      formatter: function (params) {
+        return params.name + '</br>' + params.value + 'KM';
+      },
     },
     series: [
       {
@@ -30,7 +33,13 @@ $(function () {
         label: {
           show: true,
           formatter: function (params) {
-            return params.name + '\n' + params.percent + '%';
+            return (
+              '{name|' + params.name + '\n}{percent|' + params.percent + '%}'
+            );
+          },
+          rich: {
+            name: { color: 'RGBA(171, 189, 229, 1.00)', fontSize: 12 },
+            percent: { color: 'RGBA(46, 173, 191, 1.00)', fontSize: 12 },
           },
         },
         labelLine: {
@@ -62,6 +71,9 @@ $(function () {
     },
     tooltip: {
       show: true,
+      formatter: function (params) {
+        return params.name + '</br>' + params.value + 'KM';
+      },
     },
     series: [
       {
@@ -83,7 +95,13 @@ $(function () {
         label: {
           show: true,
           formatter: function (params) {
-            return params.name + '\n' + params.percent + '%';
+            return (
+              '{name|' + params.name + '\n}{percent|' + params.percent + '%}'
+            );
+          },
+          rich: {
+            name: { color: 'RGBA(171, 189, 229, 1.00)', fontSize: 12 },
+            percent: { color: 'RGBA(46, 173, 191, 1.00)', fontSize: 12 },
           },
         },
         labelLine: {
@@ -115,6 +133,9 @@ $(function () {
     },
     tooltip: {
       show: true,
+      formatter: function (params) {
+        return params.name + '</br>' + params.value + 'KM';
+      },
     },
     series: [
       {
@@ -136,7 +157,13 @@ $(function () {
         label: {
           show: true,
           formatter: function (params) {
-            return params.name + '\n' + params.percent + '%';
+            return (
+              '{name|' + params.name + '\n}{percent|' + params.percent + '%}'
+            );
+          },
+          rich: {
+            name: { color: 'RGBA(171, 189, 229, 1.00)', fontSize: 12 },
+            percent: { color: 'RGBA(46, 173, 191, 1.00)', fontSize: 12 },
           },
         },
         labelLine: {
@@ -168,6 +195,9 @@ $(function () {
     },
     tooltip: {
       show: true,
+      formatter: function (params) {
+        return params.name + '</br>' + params.value + 'KM';
+      },
     },
     series: [
       {
@@ -189,7 +219,13 @@ $(function () {
         label: {
           show: true,
           formatter: function (params) {
-            return params.name + '\n' + params.percent + '%';
+            return (
+              '{name|' + params.name + '\n}{percent|' + params.percent + '%}'
+            );
+          },
+          rich: {
+            name: { color: 'RGBA(171, 189, 229, 1.00)', fontSize: 12 },
+            percent: { color: 'RGBA(46, 173, 191, 1.00)', fontSize: 12 },
           },
         },
         labelLine: {
@@ -253,9 +289,10 @@ $(function () {
       },
     },
     legend: {
-      data: ['四级', '六级', '七级', '等外级'],
+      data: ['三级', '四级', '五级', '六级'],
       textStyle: { color: '#fff' },
       top: '20',
+      icon: 'circle',
     },
     grid: {
       left: '3%',
@@ -288,7 +325,7 @@ $(function () {
     },
     series: [
       {
-        name: '四级',
+        name: '三级',
         type: 'bar',
         stack: '总量',
         label: {
@@ -300,7 +337,7 @@ $(function () {
         barWidth: 20,
       },
       {
-        name: '六级',
+        name: '四级',
         type: 'bar',
         stack: '总量',
         label: {
@@ -312,7 +349,7 @@ $(function () {
         barWidth: 20,
       },
       {
-        name: '七级',
+        name: '五级',
         type: 'bar',
         stack: '总量',
         label: {
@@ -324,7 +361,7 @@ $(function () {
         barWidth: 20,
       },
       {
-        name: '等外级',
+        name: '六级',
         type: 'bar',
         stack: '总量',
         label: {
