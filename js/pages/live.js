@@ -1,4 +1,18 @@
 $(function () {
+  
+  var swiper = new Swiper('.swiper-container', {
+    direction: 'vertical',
+    loop: true,
+    autoplay: true,
+    slidesPerView: 4,
+      spaceBetween: 5,
+    // pagination: {
+    //   el: '.swiper-pagination',
+    //   clickable: true,
+    // },
+  });
+
+
   // 航标
   var naviMarkOption = {
     title: {
@@ -12,7 +26,7 @@ $(function () {
         name: '绿化总里程',
         type: 'pie',
         radius: ['40%', '60%'],
-        center: ['50%', '40%'],
+        center: ['50%', '50%'],
         color: [
           '#EC7628',
           '#1EEC9C',
@@ -28,6 +42,18 @@ $(function () {
             return params.name + '\n' + params.value;
           },
         },
+        // label: {
+        //   show: true,
+        //   formatter: function (params) {
+        //     return (
+        //       '{name|' + params.name + '\n}{percent|' + params.value + '}'
+        //     );
+        //   },
+        //   rich: {
+        //     name: { color: 'RGBA(171, 189, 229, 1.00)', fontSize: 12 },
+        //     percent: { color: '#32eafa', fontSize: 12 },
+        //   },
+        // },
         labelLine: {
           show: false,
           length: 8,
@@ -49,7 +75,7 @@ $(function () {
     ],
   };
 
-  var NMChart = echarts.init(document.getElementById('navigationMarkChart'));
+  var NMChart = echarts.init(document.getElementById('liveVideo'));
   NMChart.setOption(naviMarkOption);
 
   // 标志牌

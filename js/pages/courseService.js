@@ -39,13 +39,24 @@ $(function () {
             // return a + '\n' + b + '\n' + c;
           },
           rich: {
-            sty3: {
+            sty1: {
               color: '#fff',
               backgroundColor: '#247a9a',
               padding: [3, 5],
               borderRadius: 2,
-              lineHeight: 32,
+              width:60
             },
+            sty2: {
+              color: '#fff',
+              backgroundColor: '#247a9a',
+              padding: [3, 5],
+              borderRadius: 2,
+              width:60
+            },
+            sty3: {
+              padding: [3, 5],
+              lineHeight: 32
+            }
           },
         },
         axisTick: {
@@ -95,31 +106,31 @@ $(function () {
               itemStyle: { color: '#49709b' },
             },
             {
-              value: '690',
+              value: '690\nkm',
               xAxis: 1,
               yAxis: 690,
               itemStyle: { color: '#296dba' },
             },
             {
-              value: '400',
+              value: '400\nkm',
               xAxis: 2,
               yAxis: 400,
               itemStyle: { color: '#1798ce' },
             },
             {
-              value: '400',
+              value: '400\nkm',
               xAxis: 3,
               yAxis: 400,
               itemStyle: { color: '#13bbc6' },
             },
             {
-              value: '547',
+              value: '547\nkm',
               xAxis: 4,
               yAxis: 547,
               itemStyle: { color: '#62a810' },
             },
             {
-              value: '270',
+              value: '270\nkm',
               xAxis: 5,
               yAxis: 270,
               itemStyle: { color: '#af800e' },
@@ -222,18 +233,36 @@ $(function () {
     ],
   };
 
+  var swiper = new Swiper('.swiper-container', {
+    loop: true,
+    autoplay: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+
   $('.cbs__tab').on('click', 'li', function () {
     var $this = $(this);
     var index = $this.index() > 1 ? $this.index() - 1 : $this.index();
-    $('.cbs__build-intro').hide();
+    console.log(index);
+    
+    $('#intro').hide();
     $('.cbs__tab li').removeClass('active');
     $this.addClass('active');
     $('.other__tab span').css({ visibility: 'visible' }).addClass('active');
     $('.other__tab span:last-child').removeClass('active');
     $this.parent().siblings('.cbs__tab-content').hide().eq(index).show();
-    $('#cbs__tab-content-title').text(
-      '各行' + $this.find('p').text() + '数量分布'
-    );
+    if ($this.index() === 1) {
+      $('#cbs__tab-content-title').text(
+        '各行政区锚地数量及岸线长度分布'
+      );
+    } else {
+      $('#cbs__tab-content-title').text(
+        '各行' + $this.find('p').text() + '数量分布'
+      );
+    }
+    
     var chartDom = $('.cbs-chart');
     var CBSChart = echarts.init(chartDom[0]);
     if ($this.index() == 1) {
@@ -262,6 +291,6 @@ $(function () {
       .removeClass('active');
 
     $('.cbs__tab-content').hide();
-    $('.cbs__build-intro').show();
+    $('#intro').show();
   });
 });

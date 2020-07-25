@@ -105,7 +105,7 @@ body {
   z-index: 2;
   color: #fff;
   background: rgba(16, 39, 87, 0.9);
-  overflow-y: scroll;
+  overflow-y: auto;
   border-radius: 10px;
 }
 
@@ -339,7 +339,7 @@ body {
 .infors {
   flex: 1;
   height: 210px;
-  overflow-y: scroll;
+  overflow-y: auto;
   margin-left: 20px;
   line-height: 1.5;
   text-indent: 2em;
@@ -526,8 +526,10 @@ body {
 .cbs__build-intro {
   text-indent: 2em;
   line-height: 1.5;
-  max-height: 260px;
-  overflow-y: scroll;
+  max-height: 210px;
+  overflow-y: auto;
+  flex: 1;
+  margin-left: 20px;
 }
 
 .anchor-list {
@@ -628,7 +630,7 @@ body {
 
 .navigation-mark-info {
   flex: 1;
-  margin-left: 40px;
+  margin-left: 50px;
   color: #32eafa;
   font-size: 16px;
 }
@@ -643,6 +645,7 @@ body {
   }
 }
 .navigation-mark-info__detail {
+  
   div {
     margin-top: 15px;
     justify-content: space-between;
@@ -650,6 +653,23 @@ body {
     span {
       margin-bottom: 10px;
     }
+  }
+  
+}
+
+.live-mark-info {
+  margin-left: 50px;
+  color: #32eafa;
+  font-size: 16px;
+  & > p {
+    margin-bottom: 20px;
+  }
+  .x-title {
+    font-size: 14px;
+    color: #70acde;
+  }
+  strong {
+    font-size: 22px;
   }
 }
 
@@ -673,7 +693,7 @@ body {
   }
 }
 .course-rate {
-  height: 280px;
+  height: 260px;
 }
 .work-state-tab {
   li {

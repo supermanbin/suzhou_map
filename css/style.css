@@ -115,7 +115,7 @@ body {
   z-index: 2;
   color: #fff;
   background: rgba(16, 39, 87, 0.9);
-  overflow-y: scroll;
+  overflow-y: auto;
   border-radius: 10px;
 }
 
@@ -392,7 +392,7 @@ body {
       -ms-flex: 1;
           flex: 1;
   height: 210px;
-  overflow-y: scroll;
+  overflow-y: auto;
   margin-left: 20px;
   line-height: 1.5;
   text-indent: 2em;
@@ -553,8 +553,12 @@ body {
 .cbs__build-intro {
   text-indent: 2em;
   line-height: 1.5;
-  max-height: 260px;
-  overflow-y: scroll;
+  max-height: 210px;
+  overflow-y: auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 20px;
 }
 
 .anchor-list {
@@ -641,7 +645,7 @@ body {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  margin-left: 40px;
+  margin-left: 50px;
   color: #32eafa;
   font-size: 16px;
 }
@@ -670,6 +674,25 @@ body {
   margin-bottom: 10px;
 }
 
+.live-mark-info {
+  margin-left: 50px;
+  color: #32eafa;
+  font-size: 16px;
+}
+
+.live-mark-info > p {
+  margin-bottom: 20px;
+}
+
+.live-mark-info .x-title {
+  font-size: 14px;
+  color: #70acde;
+}
+
+.live-mark-info strong {
+  font-size: 22px;
+}
+
 .mark-chart {
   -ms-flex-pack: distribute;
       justify-content: space-around;
@@ -695,7 +718,7 @@ body {
 }
 
 .course-rate {
-  height: 280px;
+  height: 260px;
 }
 
 .work-state-tab li {
